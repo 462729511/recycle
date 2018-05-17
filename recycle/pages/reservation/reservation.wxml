@@ -1,0 +1,55 @@
+<!--recycle/pages/reservation/reservation.wxml-->
+<!--recycle/pages/sell/sell.wxml-->
+<form class="sell_con" bindsubmit="formSubmit">
+  <view class="sell_contanier">
+    <view class="sell_title">
+        <text>卖废品</text>
+    </view>
+    <view class="sell_concont">
+        <input placeholder='请输入联系电话' bindchange='phoneChange' name='phone'></input>
+    </view>
+    <view class="sell_concont">
+        <input placeholder='请输入您的地址' value="{{province}}{{city}}{{district}}" bindchange='addressChange' name='address'></input>
+        <image src="../../resource/images/posi.png" class="add" bindtap='getAdd'></image>
+    </view>
+    <view class="sell_num">
+        <textarea placeholder="请输入废品描述及数量(小区废品暂支持上海市)" name="description"></textarea>
+    </view>
+       <view class="sell_concont">
+          <picker mode="date " value="{{date}}" start="2018-09-01" end="2117-09-01" bindchange="bindDateChange">
+            <view class="picker">
+               预约日期: {{date}}
+            </view>
+          </picker>
+      </view>
+      <view class="sell_concont">
+          <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+            <view class="picker">
+              具体时间: {{time}}
+            </view>
+         </picker> 
+      </view>
+    <view class="or">
+         <!-- <text>是否企业废品</text> -->
+         <!-- <switch class="tui-fr"  bindchange="changeSwitch" name="switch"/> -->
+         <checkbox-group bindchange="checkboxChange" name="checkbox">
+            <label class="checkbox">
+              是否企业废品<checkbox value="1" checked="false"/>
+            </label>
+          </checkbox-group>
+    </view>
+    <view class="sell_uplond">
+        <view class="sell_imgs">
+            <view class="close" wx:for="{{tempFilePaths}}">
+                <image  src="{{item}}" mode="scaleToFill" style="width:130rpx;height:130rpx" />
+                <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg">×</view>       
+            </view> 
+        </view>    
+        <image src="../../resource/images/uplond.png" class="sell_img" bindtap='chooseimage'></image>
+        <text>上传图片</text>
+    </view>
+  </view>  
+    <view class="buy">
+        <button  formType="submit">立即下单</button>
+    </view>
+</form>

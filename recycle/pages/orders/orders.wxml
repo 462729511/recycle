@@ -1,0 +1,28 @@
+
+<view class="buy_container">
+    <view class="reach">
+        <input placeholder='请输入搜索内容' bindblur="keyword"></input>
+        <view class="reach_img">
+            <image src="../../resource/images/reach.png" bindtap='reach'></image>        
+        </view>
+        <button size='mini' class="btn" bindtap='btn'>全部</button>
+    </view>
+    <view class="buy_left" wx:for="{{goods_list}}" bindtap='detail' data-id="{{item.id}}">
+      <!-- <block wx:for="{{item.images}}"> -->
+          <image src="{{item.images[0]}}"></image>
+      <!-- </block>      -->
+        <view class="buy_right">
+            <text>订单类型：{{item.type}}</text>
+            <text>废品描述：{{item.description}}</text>
+            <text>上门地址：{{item.address}}</text>
+     
+            <text>预约时间：{{item.reservetime}}</text>
+         
+            
+        </view>
+    </view>
+</view>
+<!-- <view class="fabu" bindtap='fabu'>
+    <text>发布求购</text>
+</view> -->
+

@@ -1,0 +1,48 @@
+<!--recycle/pages/recycl/recycl.wxml-->
+<form class="sell_contanier" bindsubmit="formSubmit">
+    <view class="sell_title">
+        <text>回收商入驻</text>
+    </view>
+    <view class="sell_concont">
+        <input placeholder='请输入联系电话' bindchange='phoneChange' name='phone'></input>
+    </view>
+    <view class="sell_concont">
+        <input placeholder='请输入您的地址' value="{{province}}{{city}}{{district}}" bindchange='addressChange' name='address'></input>
+        <image src="../../resource/images/posi.png" class="add" bindtap='getAdd'></image>
+    </view>
+    <view class="sell_concont">
+        <input placeholder='请输入回收废品名称' bindchange='nameChange' name='recyclName'></input>
+    </view>
+    <view class="sell_num">
+        <textarea placeholder="请输入经营范围详情描述" name="description"></textarea>
+    </view>
+    <block wx:if="{{id==2?true:false}}">
+       <view class="sell_concont">
+          <picker mode="date" value="{{date}}" start="2018-09-01" end="2117-09-01" bindchange="bindDateChange">
+            <view class="picker">
+               预约日期: {{date}}
+            </view>
+          </picker>
+      </view>
+      <view class="sell_concont">
+          <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+            <view class="picker">
+              具体时间: {{time}}
+            </view>
+         </picker> 
+      </view>
+    </block>
+    <view class="sell_uplond">
+        <view class="sell_imgs">
+            <view class="close" wx:for="{{tempFilePaths}}">
+                <image  src="{{item}}" mode="scaleToFill" style="width:130rpx;height:130rpx" />
+                <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg">×</view>       
+            </view> 
+        </view>    
+        <image src="../../resource/images/uplond.png" class="sell_img" bindtap='chooseimage'></image>
+        <text>上传图片</text>
+    </view>
+    <view class="buy">
+        <button  formType="submit">立即发布</button>
+    </view>
+</form>

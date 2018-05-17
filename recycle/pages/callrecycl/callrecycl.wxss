@@ -1,0 +1,77 @@
+/* recycle/pages/callrecycl/callrecycl.wxss */
+.callRecycl{
+  width: 100%;
+}
+.tabs{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  background-color: #eee
+}
+.tabs-item {
+    width:100%;
+    color:black;
+    font-size:28rpx;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-bottom:1rpx solid #D0D0D7;
+    z-index: 99
+}
+.selected{
+  background-color: #fff;
+  color: blue;
+  border-bottom:1rpx solid blue;
+}
+.tabs_detail{
+  width: 100%;
+}
+.reach{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff
+}
+.reach input{
+  padding-left: 20rpx
+}
+.reach_img{
+  margin-left: 164rpx
+}
+.reach image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.reach button{
+  background-color: green;
+  color: white;
+  margin-right: 10rpx
+}
+.buy_left{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #eee;
+  padding-bottom: 30rpx;
+}
+.buy_left image{
+  width: 250rpx;
+  height: 171rpx;
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+}
+.buy_right{
+  width: 63%;
+  padding-top: 40rpx;
+}
+.buy_right text{
+  display: block;
+  font-size: 28rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap
+}
+.btn{
+  width: 162rpx
+}

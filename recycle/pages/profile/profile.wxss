@@ -1,0 +1,27 @@
+/* recycle/pages/profile/profile.wxss */
+.profile{
+  width: 100%;
+}
+.profile_name,.profile_mobile{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-bottom: 1rpx solid #eee;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-top: 60rpx
+}
+.profile_name input{
+  margin-right: 96rpx;
+  padding-top: 10rpx
+}
+.num{
+  margin-right: 104rpx;
+  padding-top: 10rpx
+}
+button{
+  background-color: #2eb328;
+  color: white;
+  margin-top: 200rpx;
+}

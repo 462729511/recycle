@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9b48d9d4-fba0-41e7-9d0b-1a67a6dd3210" name="xcx.huaxinzhihe.com" url="http://xcx.huaxinzhihe.com">
+        <fileTransfer host="xcx.huaxinzhihe.com" port="21" rootFolder="/www/applet/recycle">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

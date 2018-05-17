@@ -1,0 +1,36 @@
+<!--recycle/pages/callrecycl/callrecycl.wxml-->
+<view class="callRecycl">
+        <view class="reach">
+                <input placeholder='请输入搜索内容'></input>
+                <view class="reach_img">
+                    <image src="../../resource/images/reach.png" bindtap='reach'></image>
+                </view>
+                
+                <button size='mini' class="btn" bindtap='btn'>全部</button>
+        </view>
+     <!-- <view class="tabs"> 
+       <block wx:for="{{tabs}}" wx:key="{{index}}">
+          <view class="tabs-item {{currentTabsIndex ==index?'selected':''}}" bindtap='onTabsItemTap' data-id='{{index}}'>
+                {{item}}
+          </view>
+       </block>  
+    </view> -->
+    <view class="tabs-item" >
+                回收商圈
+          </view>
+    <view class="tabs_detail">
+        <!-- <view hidden='{{currentTabsIndex!=0}}'>  
+         123   
+        </view>  -->
+        <!-- <view hidden='{{currentTabsIndex!=1}}'> -->
+            <view class="buy_left"  bindtap='detail' data-id="{{item.id}}" wx:for="{{recyclerList}}">
+                <image src="{{item.images[0]}}"></image>
+                  <view class="buy_right">
+                    <text>废品名称：{{item.title}}</text>
+                    <text>经营范围：{{item.description}} </text>
+                    <text>地址：{{item.address}}</text>
+                  </view>
+            </view> 
+        <!-- </view>  -->
+    </view>
+</view>

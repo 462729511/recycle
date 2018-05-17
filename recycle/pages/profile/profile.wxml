@@ -1,0 +1,13 @@
+<!--recycle/pages/profile/profile.wxml-->
+<form class="profile" bindsubmit="formSubmit">
+    <view class="profile_name">
+        <text>姓名</text>
+        <input placeholder='请输入您的姓名' name="name" value="{{realname}}"></input>
+    </view>
+    <view class="profile_mobile">
+        <text>手机号</text>
+        <input placeholder='请输入您的手机号' class="num" name="mobile" value="{{mobile}}"></input>
+    </view>
+
+    <button formType="submit">保存</button>
+</form>

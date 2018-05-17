@@ -1,0 +1,32 @@
+<!--recycle/pages/detail/detail.wxml-->
+<view class="detail_container">
+    <view class="detail_call">
+        <text>联系电话 ：{{mobile}}</text>
+    </view>
+    <view class="detail_call">
+        <text>废品种类 ： 废纸</text>
+    </view>
+    <view class="detail_des">
+        <text>废品描述 ： {{description}}</text>
+    </view> 
+    <view class="detail_call">
+        <text>上门地址 ： {{address}}</text>
+    </view>
+    <view class="detail_call">
+      <block wx:if="{{time==''}}">
+
+      </block>
+      <block wx:else>
+         <text>预约时间 ： {{time}}</text>
+      </block>
+        
+    </view>
+    <view class="detail_cam">
+        <text>实物拍照：</text>
+        <view class="detail_img">
+            <block wx:for="{{images}}">
+              <image src="{{item}}" bindtap='img'  data-src="{{item}}"></image>
+            </block> 
+        </view>            
+    </view>
+</view>

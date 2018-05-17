@@ -1,0 +1,40 @@
+/* recycle/pages/recyclDetail/recyclDetail.wxss */
+.detail_container{
+  width: 100%;
+}
+.detail_call{
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 44rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+
+}
+.detail_description {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 44rpx;
+  margin-top: 50rpx;
+  line-height: 50rpx;
+}
+.detail_description text{
+  display: block;
+  width: 90%;
+}
+/* .detail_description{
+  width: 100%;
+  padding-left: 44rpx;
+  margin: 0 auto;
+  /* min-height: 100rpx; */
+  /* line-height: 50rpx; */
+  /* padding-right: 20rpx; */
+/* } */ 
+.detail_img{
+  width: 100%;
+  padding-left: 44rpx
+}
+.detail_img image{
+  width: 250rpx;
+  height: 150rpx;
+  margin-left: 10rpx;
+}

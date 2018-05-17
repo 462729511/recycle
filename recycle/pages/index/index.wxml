@@ -1,0 +1,65 @@
+ <view class="mask" hidden='{{isShow}}' bindtap='back' animation="{{animationData}}">
+
+</view> 
+<view class="container" animation="{{animationData}}">
+    <view class="waster_top">
+        <image src="../../resource/images/user.png" catchtap='animationa'></image>
+        <view class="waster_posi">
+            <image src="../../resource/images/posi.png"></image><text>{{city}}</text>
+        </view>
+    </view>
+    <!-- 按钮 -->
+    <view class="waster_center">
+        <button bindtap='sell'>卖废品</button>
+        <button bindtap='buy'>买废品</button>
+        <view  class="video" data-id="1" bindtap="videoPlay" >
+          <video wx:if="{{curr_id == 1}}"  id="myVideo"  class="video" src="{{video}}" poster="{{item.poster}}"  objectFit="cover"  controls></video>
+          <view wx:else >
+              <image class="model-img" mode="aspectFill" src="{{thumbnail}}"></image>
+              <view class="model-btn">
+                   <view class="play-icon"></view>
+              </view>
+          </view>
+        </view>
+        <!-- <video id="myVideo" class="video" src="{{video}}"   enable-danmu danmu-btn controls></video>    -->
+    </view>
+    <view class="waster_call" bindtap='callrecycl'>
+        <image src="../../resource/images/call.png" class="call"></image>
+        <text>呼叫回收</text>
+    </view>
+    <view class="waster_share" >
+        <button bindtap='share' open-type="share">推荐给微信好友</button>
+    </view>
+    <view class="waster_bottom">
+        <text bindtap='sell'>立即下单</text>
+        <text bindtap='reservation'>预约</text>
+    </view>
+</view>
+  <!-- 个人中心 -->
+<view class="user {{show?'show':''}}" >
+    <view class="userinfo">
+         <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>         
+    </view> 
+    <view class="user_list">
+        <view class="user_detail" bindtap='order'>
+              <image src="../../resource/icon/orderselect.png"></image>
+              <text>订单目录</text>
+        </view>
+         <view class="user_detail" bindtap='recycl'>
+              <image src="../../resource/images/plus.png"></image>
+              <text>发布求购</text>
+        </view>
+         <view class="user_detail" bindtap='profile'>
+              <image src="../../resource/images/center.png"></image>
+              <text>我的资料</text>
+        </view>
+         <view class="user_detail" bindtap='call'>
+              <image src="../../resource/images/kefu.png"></image>
+              <text>客服中心</text>
+        </view>
+    </view>
+</view>

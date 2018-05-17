@@ -1,0 +1,21 @@
+<!--recycle/pages/recyclDetail/recyclDetail.wxml-->
+<view class="detail_container">
+    <view class="detail_call">
+        <text>废品名称 ：{{title}}</text>
+    </view>
+    <view class="detail_call">
+        <text>联系方式 ：{{mobile}}</text>
+    </view>
+    <view class="detail_call">
+        <text>地址 ： {{address}}</text>
+    </view> 
+    <view class="detail_description">
+        <text>服务范围： {{description}}</text>
+    </view>
+    <view class="detail_img">
+        <text>实物拍照：</text>
+       <block wx:for="{{images}}">
+          <image src="{{item}}" bindtap='img' data-src="{{item}}"></image>
+       </block> 
+    </view>
+</view>

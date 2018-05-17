@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "recycle/pages/index/index",
+    "recycle/pages/sell/sell",
+    "recycle/pages/buy/buy",
+    "recycle/pages/detail/detail",
+    "recycle/pages/recycl/recycl",
+    "recycle/pages/callrecycl/callrecycl",
+    "recycle/pages/recyclDetail/recyclDetail",
+    "recycle/pages/profile/profile",
+    "recycle/pages/orders/orders",
+    "recycle/pages/reservation/reservation"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "green",
+    "navigationBarTextStyle": "black"
+  }
+}
